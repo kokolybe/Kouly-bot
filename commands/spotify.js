@@ -12,7 +12,7 @@ module.exports = {
       const response = await axios.get(apiUrl);
 
       // Extract the Spotify link from the response
-      const spotifyLink = response.data.download;
+      const spotifyLink = response.data[0].download;
 
       if (spotifyLink) {
         // Send the MP3 file as an attachment
