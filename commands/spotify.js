@@ -8,11 +8,11 @@ module.exports = {
     const query = args.join(' ');
 
     try {
-      const apiUrl = `https://deku-rest-apis.ooguy.com/spotify?q=${encodeURIComponent(query)}`;
+      const apiUrl = `https://hiroshi-api.onrender.com/tiktok/spotify?search=${encodeURIComponent(query)}`;
       const response = await axios.get(apiUrl);
 
       // Extract the Spotify link from the response
-      const spotifyLink = response.data.result;
+      const spotifyLink = response.data.download;
 
       if (spotifyLink) {
         // Send the MP3 file as an attachment
